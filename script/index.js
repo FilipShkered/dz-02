@@ -6,25 +6,41 @@ const num2 = Number(prompt('Type the number 2', ''));
 
 let result;
 
-switch (operator) {
-    case '+':
-        result = num1 + num2;
-        break;
-    case '-':
-        result = num1 - num2;
-        break;
-    case '*':
-        result = num1 * num2;
-        break;
-    case '/':
-        if (num2 > 0) {
-           result = num1 / num2;
-        } else {
-           result = 'is not divisible by zero';
-        }
-        break;
-    default:
-       result = 'select an operator';
+// switch (operator) {
+//     case '+':
+//         result = num1 + num2;
+//         break;
+//     case '-':
+//         result = num1 - num2;
+//         break;
+//     case '*':
+//         result = num1 * num2;
+//         break;
+//     case '/':
+//         if (num2 > 0) {
+//            result = num1 / num2;
+//         } else {
+//            result = 'is not divisible by zero';
+//         }
+//         break;
+//     default:
+//        result = 'select an operator';
+// }
+
+// or
+
+if (operator === '+') {
+    result = num1 + num2;
+} else if (operator === '-') {
+    result = num1 - num2;
+} else if (operator === '*') {
+    result = num1 * num2;
+} else if (operator === '/' && num2 > 0) {
+    result = num1 / num2;
+} else if (operator === '/') {
+    result = 'is not divisible by zero';
+} else {
+    result = 'select an operator';
 }
 
 
