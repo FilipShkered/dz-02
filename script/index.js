@@ -1,14 +1,14 @@
-let num1 = prompt('Type the number 1', '');
-// num1 = Number(num1); Вариант №1  
+const num1 = Number(prompt('Type the number 1', '')); 
 
-let operator = prompt('type operator: + - / *', '');
+const operator = prompt('type operator: + - / *', '');
 
-let num2 = prompt('Type the number 2', '');
-// num2 = Number(num2); Вариант №1 
+const num2 = Number(prompt('Type the number 2', ''));
+
+let result;
 
 switch (operator) {
     case '+':
-        result = Number(num1) + Number(num2); //Вариант №2
+        result = num1 + num2;
         break;
     case '-':
         result = num1 - num2;
@@ -18,13 +18,13 @@ switch (operator) {
         break;
     case '/':
         if (num2 > 0) {
-            result = num1 / num2;
+           result = num1 / num2;
         } else {
-            result = 'is not divisible by zero';
+           result = 'is not divisible by zero';
         }
         break;
     default:
-        result = 'select an operator';
+       result = 'select an operator';
 }
 
 
